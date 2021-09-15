@@ -3,7 +3,7 @@ Deep Neural Network Models for 2D HP lattice protein fold prediction, based on T
 
 In this repository, we provide several neural network modeling methods to solve the protein folding prediction task. The molecular chains here  are 19mer theoretical proteins of two-dimensional lattice HP model.
 
-In each python script, we realized the construction and training of the NN models, and evaluation of the predicting accuracies. 
+In each python script, we realized the construction and training of the NN models, and also the evaluation of predicting accuracies. 
 We provide a data making script to produce and partition training sets and data sets of HP 19mer chains. The repository [vvoelz/HPSandbox](https://github.com/vvoelz/HPSandbox) provides the raw data of HP proteins.
 
 

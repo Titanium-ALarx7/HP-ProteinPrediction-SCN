@@ -12,7 +12,7 @@ pass
 
 ## Repository Contents
 + Four neural network models python scripts containing: model itself, basic components of network models and accuracy metric. These functions can be imported from the scripts under working directory. You can also run these model scripts directly and get an example of defaultly 1200 epoches training process. \
-  eg. `python baseline_CNNmodel.py -[optional parameters]`
+  eg. `python baseline_CNNmodel.py -[optional parameters]` 
   > Step 2900, Train Accuracy Distribution:\
   > [0.0, 0.0, 0.0, 0.0, 0.001, 0.001, 0.005, 0.008, 0.012, 0.017, 0.021, 0.047, 0.048, 0.093, 0.092, 0.119, 0.153, 0.143, 0.129, 0.111]\
   > Train Cross Entropy: 9.664868\
@@ -22,6 +22,8 @@ pass
   > Test set latest accuracies:\
   > [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0005, 0.0005, 0.001, 0.003, 0.0035, 0.002, 0.01, 0.0125, 0.0105, 0.02, 0.023, 0.021, 0.0215, 0.0315, 0.036, 0.0405, 0.045,   0.0525, 0.0535, 0.0575, 0.0595]
 
+    As shown in above, `model.py` trains a neural network and monitors its 
+    (The illustration holds the same for all the model script in the following list.)
 1. .py
 2. .py
 3. .py
@@ -33,6 +35,10 @@ pass
 ### Model Usage
 
 ### Dataset Generation
+
+## Model Illustration
+(可能这一段应该放到最开始的地方)
+In this section, we briefly introduce the mechanism of our own model AttentionNN-HPSCC and our own version of Conditional Random Field.
 
 
 [Test Something interesting](#how-to-use-this-repo)

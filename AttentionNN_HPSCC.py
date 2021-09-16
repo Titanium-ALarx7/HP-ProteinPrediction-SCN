@@ -59,7 +59,7 @@ iter_width = 12
 # data restoring directory
 directory0 = "data/"
 directory1 = 'data_HPSCC/'
-accu_file_name = 'SCNCNN_epoch%d_basenum%d_name%s.txt' % (epoc, base_num,name_num)
+accu_file_name = 'HPSCC_epoch%d_basenum%d_name%s.txt' % (epoc, base_num,name_num)
 data_name = directory0 + directory1 + accu_file_name
 
 

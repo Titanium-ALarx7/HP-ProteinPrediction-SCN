@@ -15,9 +15,8 @@ We provide a data making script to produce and partition training sets and data 
 pass
 
 ## Repository Contents
-+ Four neural network models python scripts containing: model itself, basic components of network models and accuracy metric. These functions can be imported from the scripts under working directory. You can also run these model scripts directly and get an example of defaultly 1200 epoches training process. \
-  For example, we can use this command to run a model script in CMD or Shell:  `python baseline_CNNmodel.py -[optional parameters]` \
-  And during running time, we can get following training information.
++ Four neural network model python scripts, containing: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. \
+  Here, we take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  `python baseline_CNNmodel.py -[optional parameters]`. This operation builds a corresponding neural network and optimize its variables on training set. And during running time, we can get following statistics of in time model performance.
   > Step 2900, Train Accuracy Distribution:\
   > [0.0, 0.0, 0.0, 0.0, 0.001, 0.001, 0.005, 0.008, 0.012, 0.017, 0.021, 0.047, 0.048, 0.093, 0.092, 0.119, 0.153, 0.143, 0.129, 0.111]\
   > Train Cross Entropy: 9.664868\
@@ -27,7 +26,10 @@ pass
   > Test set latest accuracies:\
   > [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0005, 0.0005, 0.001, 0.003, 0.0035, 0.002, 0.01, 0.0125, 0.0105, 0.02, 0.023, 0.021, 0.0215, 0.0315, 0.036, 0.0405, 0.045,   0.0525, 0.0535, 0.0575, 0.0595]
 
-    As shown in above, `model.py` trains a neural network and monitors its 
+    As shown above, for every 100 steps, the model prints accuracy and cross entropy (loss) on 1000 randomly chosen training samples and accuracy on the whole test set to *stdout*. Accuracy here is shown as a discrete distribution, which has 19 values. Each value denotes the the propotion of results in which model predicted correctly exact n coordinates of one chain folding. And thus, the last value of the accuracy distribution means the proportion that model predicts all coordinates correctly. 
+    
+    We define this last value as accuracy，and record it every 100 steps. These data are written into `baselineCNN_epoch*basenum*_name**.txt` in binary form using python package `pickle` and restored in `data\data_baselineCNN`. To monitor the change of the model performance during the optimization performance easily, *Test set latest accuracies* shows accuracy of the model in last 5000 steps. 
+    
     (The illustration holds the same for all the model script in the following list.)
 1. .py
 2. .py

@@ -12,9 +12,9 @@ pass
 
 ## Repository Contents
 + 4 neural network models containing: model itself, basic components of network models and accuracy metric. These functions can be imported from the script under working directory. 
-+ 1. .py
-+ 2. .py
-+ 3. .py
+1. .py
+2. .py
+3. .py
 
 ## How to use this repository
 

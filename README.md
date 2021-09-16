@@ -34,7 +34,7 @@ pass
 
     As shown above, for every 100 steps, the model prints accuracy and cross entropy (loss) on 1000 randomly chosen training samples and accuracy on the whole test set to *stdout*. Accuracy here is shown as a discrete distribution, which has 19 values. Each value denotes the the propotion of results in which model predicted correctly exact n coordinates of one chain folding. And thus, the last value of the accuracy distribution means the proportion that model predicts all coordinates correctly. 
     
-    We define this last value as accuracy，and record it every 100 steps. These data are written into `baselineCNN_epoch*basenum*_name**.txt` in binary form using python package `pickle` and restored in `data\data_baselineCNN`. To monitor the change of the model performance during the optimization performance easily, *Test set latest accuracies* shows accuracy of the model in last 5000 steps. 
+    We define this last value as accuracy，and record it every 100 steps. These data are written into a *txt* file in binary form using python package `pickle`, named as `baselineCNN_epoch*basenum*_name**.txt` and restored in `data\data_baselineCNN`. To monitor the change of the model performance during the optimization performance easily, *Test set latest accuracies* shows accuracy of the model in last 5000 steps. 
     This illustration holds the same for all the model scripts.
 
 ## How to use this repository

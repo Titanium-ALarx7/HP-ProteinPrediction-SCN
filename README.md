@@ -1,7 +1,7 @@
 # HPprotein-prediction-SCN
 HPprotein-prediction-SCN is a package provideing several python scripts of deep neural network models for 2D HP lattice protein fold problem, based on Tensorflow 1.x. 
 
-In this repository, we provide examples of **S**trong **C**orrelated **N**etwork(**SCN**) model and **Configuration Mapping** method to solve the protein folding prediction problems. The molecular chains here are 19mer theoretical proteins of two-dimensional lattice HP model. For comparision, we also provide several standard NN models on the same task to show the improvement brought by SCN and CM. 
+In this repository, we provide examples of **A**ttention **S**trong **C**orrelated **N**etwork(**A-SCN**) model and **Configuration Mapping** method to solve the protein folding prediction problems. The molecular chains here are 19mer theoretical proteins of two-dimensional lattice HP model. For comparision, we also provide several standard NN models on the same task to show the improvement brought by A-SCN and CM. 
 
 ## Model Illustration
 (可能这一段应该放到最开始的地方)

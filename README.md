@@ -54,13 +54,14 @@ We take HP 19mer protein as an example:
 1. Download and decompress [hp19.tar.gz](https://github.com/vvoelz/HPSandbox/blob/master/sequences/conf/hp19.tar.gz) under working directory. File in `/hp19` has name denoting the HP protein sequence and content in file notating two-dimensional coordinates of the folding structure:
      > filename = 'HHHHHHHHHHHHPHPPPHP.conf' \
      > Configuration = '[(0, 0), (0, 1), (1, 1), (1, 2), (0, 2), (0, 3), (-1, 3), (-2, 3),...,...]'\
-   As the content of files is *String*, we 
+   As the content of file is *String*, we 
 4. Dump the train
-    ` keys = ['num_of_sample', 'chain_length', 'input_HPs', 'output_confs']`
-    ` values = [len(washed_inputHPs), 19, washed_inputHPs, washed_outputconfs]`
-    ` d = zip(keys,values)`
-    ` data_dict = dict(d)`
-    ` with open('HP19mer_conf_data.txt', 'wb') as f:`
-    `     pickle.dump(data_dict, f)`
-    
+```
+    keys = ['num_of_sample', 'chain_length', 'input_HPs', 'output_confs'] 
+    values = [len(washed_inputHPs), 19, washed_inputHPs, washed_outputconfs]
+    d = zip(keys,values)
+    data_dict = dict(d)
+    with open('HP19mer_conf_data.txt', 'wb') as f:
+    pickle.dump(data_dict, f)
+```
     

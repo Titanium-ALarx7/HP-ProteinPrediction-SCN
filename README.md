@@ -53,6 +53,7 @@ In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.p
 
 We take HP 19mer protein as an example: \
 Download and decompress [hp19.tar.gz](https://github.com/vvoelz/HPSandbox/blob/master/sequences/conf/hp19.tar.gz) under working directory. File in `/hp19` has name denoting the HP protein sequence and content in file notating two-dimensional coordinates of the folding structure:
+
      > filename = 'HHHHHHHHHHHHPHPPPHP.conf' \
      > Configuration = '[(0, 0), (0, 1), (1, 1), (1, 2), (0, 2), (0, 3), (-1, 3), (-2, 3),...,...]'\
      
@@ -60,8 +61,8 @@ Then, simply use this command in bash or CMD:
 ```
 python dataprocessor.py -dir hp19 -testsetSize 2000
 ```
-This command will read files from directory `hp19` and generate train/test file: 
+This command will read files from directory `hp19` and generate train/test file: [HP19testset2000.txt](dataset/HP19testset2000.txt) & [HP19trainset11470.txt](dataset/HP19trainset11470.txt) in `\dataset` directory. Other files in `\dataset` directory is mid product of this script. You can read the note in the script for more details.
 
-For this script contains procedures to check whether there are repeated sequences in the dataset. So the whole process may take several minutes.
+For this script contains procedures to check whether there are repeated sequences in the dataset. So the whole process may take several minutes. 
 
 

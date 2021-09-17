@@ -2,7 +2,6 @@
 # Copyright 2021
 import tensorflow as tf
 import numpy as np
-import dataprocessor as dp
 import pickle
 import re
 import os.path

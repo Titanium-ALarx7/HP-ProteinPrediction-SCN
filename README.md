@@ -21,12 +21,13 @@ We provide a data making script to produce and partition training sets and data 
 
 + [`ConfMapper.py`](ConfMapper.py): ConfMapper script realized one of the key algorithm, **Config Notation**, in this package. This algorithm generates a strong priori for the model to learn the local characters of protein folding structures efficiently. All the model scripts except `CRFmodel.py` in this package can call `ConfMapper.py` directly.(CRF is not compatible with Conf Notation) Config notation is set not enabled by default. And thus for each model script, the optional parameter `-bn, --base_num` is set as 1. To enable usage of Conf Notation, run the script with `python *Model*.py -bn n`. Here `n` should be a positive integer which sets the window size of Conf Notation to `n`.
 
-+ `\dataset` & `dataprocessor.py`: 
++ [`/dataset`](/dataset) & [`dataprocessor.py`](dataprocessor.py): The directory is used to store training set and test set of HP 19mer proteins' sequence and folding structure. Two dataset files in the directory is processed and random partitioned. For customized usage of original data [HPSandbox](https://github.com/vvoelz/HPSandbox) ， we privide a `dataprocessor` script. (eg. validation set, cross validation, process of other HP protein datas etc.) Please refer to [Dataset Generation](# Dataset-Generation) section for more details.
 
-+ `\data`
++ [`/data`](/data): The accuracy data file of each model script is defaultly restored in this directory.
+
 ## Model Usage
-+ The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. \
-  Here, we take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  `python baseline_CNNmodel.py -[optional parameters]`. This operation builds a corresponding neural network and optimize its variables on training set. And during running time, we can get following statistics of in time model performance.
++ The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. 
++ You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. We take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  `python baseline_CNNmodel.py -[optional parameters]`. This operation builds a corresponding neural network and optimize its variables on training set. And during running time, we can get following statistics of in time model performance.
   > Step 2900, Train Accuracy Distribution:\
   > [0.0, 0.0, 0.0, 0.0, 0.001, 0.001, 0.005, 0.008, 0.012, 0.017, 0.021, 0.047, 0.048, 0.093, 0.092, 0.119, 0.153, 0.143, 0.129, 0.111]\
   > Train Cross Entropy: 9.664868\

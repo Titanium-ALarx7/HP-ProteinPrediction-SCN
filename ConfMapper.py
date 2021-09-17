@@ -52,7 +52,7 @@ def convert_dectoter(input_seq: np.array, base_num, num_seq=19) -> np.array:
 if __name__=="__main__":
     """
     output_test is a np.array test set with shape [2000, 19]
-    Here, we employed a script to test ConfMapper methods work without error.
+    Here, we employed a unit test to assert ConfMapper methods work without error.
     An array which is converted by tertodec  should return identical to itself after converted by dectoter again.
     """
     with open('dataset/HP19testset2000.txt', 'rb') as f:

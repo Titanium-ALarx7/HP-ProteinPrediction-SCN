@@ -2,8 +2,6 @@
 import tensorflow as tf
 import numpy as np
 import argparse
-import optimization as op
-import dataprocessor as dp
 import ConfMapper as cm
 from pathlib import Path
 from datetime import datetime
@@ -222,10 +220,7 @@ if __name__ == "__main__":
     y, loss = SCN_CNN_model(x, y_, is_training, iter_xx=iter_xx, basenum=base_num)
     loss = loss + WDecay
     accuracy_distribution = accuracy_metrics(y, y_, base_num=base_num)
-    train_step = op.create_optimizer(loss=loss,
-                                     init_lr=1e-4,
-                                     num_train_steps=num_training_steps,
-                                     num_warmup_steps=100, use_tpu=False)
+    train_step = tf.train.AdamOptimizer(1e-4).minimize(loss)
 
     session = tf.Session()
     with session as sess:

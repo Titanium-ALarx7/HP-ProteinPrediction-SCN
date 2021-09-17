@@ -16,10 +16,12 @@ pass
 
 ## Repository Contents
 + Network Model Scripts:
-  1. .py
-  2. .py
-  3. .py
+  1. [`baseline_CNNmodel.py`](baseline_CNNmodel.py)：A model with a standard two-layer Convolutional Neural Network.
+  2. [`CRFmodel.py`](CRFmodel.py)：A model utilizing Conditional Random Field method for protein structure prediction, in our own way. For more details about CRF, see [Sheng Wang, et.al](https://www.nature.com/articles/srep18962). This model uses the same CNN module as `baseline_CNNmodel.py`.
+  3. [`SCN_CNNmodel.py`](SCN_CNNmodel.py)：A model employs Strong Correlated Network and model structure is partly based on `baseline_CNNmodel.py`. It builds a strong correlation among protein residues in physical space through a self-consistent iteration loop.
+  4. [`AttentionNN_HPSCC.py`](AttentionNN_HPSCC.py)：
 
++ [`ConfMapper.py`](ConfMapper.py):
 ## Model Usage
 + The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. \
   Here, we take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  `python baseline_CNNmodel.py -[optional parameters]`. This operation builds a corresponding neural network and optimize its variables on training set. And during running time, we can get following statistics of in time model performance.

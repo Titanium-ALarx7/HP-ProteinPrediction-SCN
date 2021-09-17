@@ -41,7 +41,7 @@ def formalize_data(line: str) -> tuple:
 # Dividing whole dataset into two parts: one set with all the different sequence,
 # the other with all the reversed sequence.
 def wash_data(dir="dataset/"):
-    with open(dir + 'HP19mer_conf_data.txt', 'rb') as f:
+    with open(dir + dataname + 'mer_conf_data.txt', 'rb') as f:
         dict_data = pickle.load(f)
     # keys: ['num_of_sample', 'chain_length', 'input_HPs', 'output_confs']
     # Number of HP Seqs= num_of_sample / 2
@@ -81,24 +81,24 @@ def wash_data(dir="dataset/"):
             print(i)
             symmetry_id.append(i)
 
-    with open(dir + 'HP19mer_original%d.txt' % n_washed, 'wb') as f:
+    with open(dir + dataname + 'mer_original%d.txt' % n_washed, 'wb') as f:
         pickle.dump((washed_input, washed_output), f)
-    with open(dir + 'HP19mer_reverse%d.txt' % n_reversed, 'wb') as f:
+    with open(dir + dataname + 'mer_reverse%d.txt' % n_reversed, 'wb') as f:
         pickle.dump((reversed_input, reversed_output), f)
-    with open(dir + 'HP19mer_symmetry_sample_ids.txt', 'wb') as f:
+    with open(dir + dataname + 'mer_symmetry_sample_ids.txt', 'wb') as f:
         pickle.dump(symmetry_id, f)
 
 
 def creat_training_data(test_set_size=1000):
-    with open(dir + 'HP19mer_original6735.txt', 'rb') as f:
+    with open(dir + dataname + 'mer_original6735.txt', 'rb') as f:
         ordered_input, ordered_output = pickle.load(f)
         ordered_input = np.array(ordered_input)
         ordered_output = np.array(ordered_output)
-    with open(dir + 'HP19mer_reverse6735.txt', 'rb') as f:
+    with open(dir + dataname + 'mer_reverse6735.txt', 'rb') as f:
         reversed_input, reversed_output = pickle.load(f)
         reversed_input = np.array(reversed_input)
         reversed_output = np.array(reversed_output)
-    with open(dir + 'HP19mer_symmetry_sample_ids.txt', 'rb') as f:
+    with open(dir + dataname + 'mer_symmetry_sample_ids.txt', 'rb') as f:
         symmetry_ids = pickle.load(f)
 
     n = len(reversed_input)
@@ -123,8 +123,8 @@ def creat_training_data(test_set_size=1000):
 
     dict_test = dict(zip(['input', 'output'], (np.array(Test_input), np.array(Test_output))))
     dict_train = dict(zip(['input', 'output'], (np.array(Train_input), np.array(Train_output))))
-    filetest = 'HP19testset%d.txt' % num_test
-    filetrain = 'HP19trainset%d.txt' % num_train
+    filetest = dataname + 'testset%d.txt' % num_test
+    filetrain = dataname + 'trainset%d.txt' % num_train
     with open(dir + filetest, 'wb') as ftest:
         pickle.dump(dict_test, ftest)
     with open(dir + filetrain, 'wb') as ftrain:
@@ -140,6 +140,7 @@ if __name__ == '__main__':
     parser.add_argument("--testsetSize", type=int, default=2000)
     args = parser.parse_args()
     datapath = args.dir
+    dataname = datapath.upper()
     test_set_size = args.testsetSize
     dir = "dataset/"
     filenames = []
@@ -202,7 +203,7 @@ if __name__ == '__main__':
     values = [len(washed_inputHPs), 19, washed_inputHPs, washed_outputconfs]
     d = zip(keys, values)
     data_dict = dict(d)
-    with open(dir + 'HP19mer_conf_data.txt', 'wb') as f:
+    with open(dir + dataname + 'mer_conf_data.txt', 'wb') as f:
         pickle.dump(data_dict, f)
 
     #

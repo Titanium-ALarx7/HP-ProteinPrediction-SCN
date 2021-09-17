@@ -50,11 +50,11 @@ We take HP 19mer protein as an example:
      > Configuration = '[(0, 0), (0, 1), (1, 1), (1, 2), (0, 2), (0, 3), (-1, 3), (-2, 3),...,...]'\
    As the content of files is *String*, we 
 4. Dump the train
-    ` keys = ['num_of_sample', 'chain_length', 'input_HPs', 'output_confs']\
-      values = [len(washed_inputHPs), 19, washed_inputHPs, washed_outputconfs]\
-      d = zip(keys,values)\
-      data_dict = dict(d)\
-      with open('HP19mer_conf_data.txt', 'wb') as f:\
-          pickle.dump(data_dict, f)\
-    `
+    ` keys = ['num_of_sample', 'chain_length', 'input_HPs', 'output_confs']`
+    ` values = [len(washed_inputHPs), 19, washed_inputHPs, washed_outputconfs]`
+    ` d = zip(keys,values)`
+    ` data_dict = dict(d)`
+    ` with open('HP19mer_conf_data.txt', 'wb') as f:`
+    `     pickle.dump(data_dict, f)`
+    
     

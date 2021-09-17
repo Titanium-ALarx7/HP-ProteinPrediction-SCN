@@ -134,7 +134,12 @@ def creat_training_data(test_set_size=1000):
 
 if __name__ == '__main__':
     # Load data from directory
-    datapath = 'hp19'
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-dir", type=str, default="hp19")
+    parser.add_argument("--testsetSize", type=int, default=2000)
+    args = parser.parse_args()
+    datapath = args.dir
+    test_set_size = args.testsetSize
     dir = "dataset/"
     filenames = []
     for (_, _, f) in walk(datapath):
@@ -201,7 +206,7 @@ if __name__ == '__main__':
 
     #
     wash_data(dir)
-    creat_training_data(2000)
+    creat_training_data(test_set_size)
 
 
 

@@ -61,7 +61,7 @@ Then, simply use this command in bash or CMD:
 ```
 python dataprocessor.py -dir hp19 -testsetSize 2000
 ```
-This command will read files from directory `hp19` and generate train/test file: [HP19testset2000.txt](dataset/HP19testset2000.txt) & [HP19trainset11470.txt](dataset/HP19trainset11470.txt) in `\dataset` directory. Other files in `\dataset` directory is mid product of this script. You can read the note in the script for more details.
+This command will read files from directory `hp19` and generate train/test file: [HP19testset2000.txt](dataset/HP19testset2000.txt) & [HP19trainset11470.txt](dataset/HP19trainset11470.txt) in `\dataset` directory. `-dir` parameters denotes raw HP protein data is in which directory and .Other files in `\dataset` directory is mid product of this script. You can read the note in the script for more details.
 
 For this script contains procedures to check whether there are repeated sequences in the dataset. So the whole process may take several minutes. 
 

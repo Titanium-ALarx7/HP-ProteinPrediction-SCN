@@ -2,7 +2,6 @@
 import tensorflow as tf
 import numpy as np
 import argparse
-import dataprocessor as dp
 import ConfMapper as cm
 from pathlib import Path
 from datetime import datetime

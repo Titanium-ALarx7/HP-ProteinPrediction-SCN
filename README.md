@@ -28,7 +28,9 @@ We provide a data making script to produce and partition training sets and data 
 ## Model Usage
 + The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. 
 + You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. We take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  \
-`python baseline_CNNmodel.py -[optional parameters]` \ 
+```sh
+$ python baseline_CNNmodel.py
+```
 This operation builds a corresponding neural network and optimize its variables on training set. And during running time, we can get following statistics of in time model performance.
   > Step 2900, Train Accuracy Distribution:\
   > [0.0, 0.0, 0.0, 0.0, 0.001, 0.001, 0.005, 0.008, 0.012, 0.017, 0.021, 0.047, 0.048, 0.093, 0.092, 0.119, 0.153, 0.143, 0.129, 0.111]\

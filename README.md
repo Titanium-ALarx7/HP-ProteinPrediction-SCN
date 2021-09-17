@@ -41,23 +41,7 @@ We provide a data making script to produce and partition training sets and data 
     
     We define this last value as accuracy，and record it every 100 steps. These data are written into a *txt* file in binary form using python package `pickle`, named as `baselineCNN_epoch*basenum*_name**.txt` and restored in `data\data_baselineCNN`. To monitor the change of the model performance during the optimization performance easily, *Test set latest accuracies* shows accuracy of the model in last 5000 steps. 
     This illustration holds the same for all the model scripts.
-
-## How to use this repository
-
-### Installation
-
-
-
-### Dataset Generation
-
-
-
-
-[Test Something interesting](#how-to-use-this-repo)
-> This is the first level of quotation:
-> > I'd like to show that there is no evidence that we can't quote 2nd time in a quotation field.
-> > > This is a rather interesting mechanism about quotation iteration.
-
-    This is a code block paragraph(To build a code block, I just need to type 4 spaces or one Tab at the beginning)
-    import fxxxain as fx
+    
+## Dataset Generation
+In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.py) to deal with original data in the [HPSandbox](https://github.com/vvoelz/HPSandbox) and generate train/test/validation sets. 
 

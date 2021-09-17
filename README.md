@@ -19,7 +19,7 @@ pass
   1. [`baseline_CNNmodel.py`](baseline_CNNmodel.py)：A model with a standard two-layer Convolutional Neural Network.
   2. [`CRFmodel.py`](CRFmodel.py)：A model utilizing Conditional Random Field method for protein structure prediction, in our own way. For more details about CRF, see [Sheng Wang, et.al](https://www.nature.com/articles/srep18962). This model uses the same CNN module as `baseline_CNNmodel.py`.
   3. [`SCN_CNNmodel.py`](SCN_CNNmodel.py)：A model employs Strong Correlated Network and model structure is partly based on `baseline_CNNmodel.py`. It builds a strong correlation among protein residues in physical space through a self-consistent iteration loop.
-  4. [`AttentionNN_HPSCC.py`](AttentionNN_HPSCC.py)：
+  4. [`AttentionNN_HPSCC.py`](AttentionNN_HPSCC.py)：A model combining SCN mechanism and our own designed network block with self-attention layers. This model exhibits the optimum prediction performance. 
 
 + [`ConfMapper.py`](ConfMapper.py):
 ## Model Usage

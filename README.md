@@ -54,8 +54,8 @@ In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.p
 We take HP 19mer protein as an example: \
 Download and decompress [hp19.tar.gz](https://github.com/vvoelz/HPSandbox/blob/master/sequences/conf/hp19.tar.gz) under working directory. File in `/hp19` has name denoting the HP protein sequence and content in file notating two-dimensional coordinates of the folding structure:
 
-     > filename = 'HHHHHHHHHHHHPHPPPHP.conf' \
-     > Configuration = '[(0, 0), (0, 1), (1, 1), (1, 2), (0, 2), (0, 3), (-1, 3), (-2, 3),...,...]'\
+> filename = 'HHHHHHHHHHHHPHPPPHP.conf' \
+> Configuration = [(0, 0), (0, 1), (1, 1), (1, 2), (0, 2), (0, 3), (-1, 3), (-2, 3),...,...]
      
 Then, simply use this command in bash or CMD:
 ```

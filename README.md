@@ -44,5 +44,14 @@ We provide a data making script to produce and partition training sets and data 
     
 ## Dataset Generation
 In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.py) to deal with original data in the [HPSandbox](https://github.com/vvoelz/HPSandbox) and generate train/test/validation sets. 
-We take hp 19mer protein as an example:
-1. [hp19.tar.gz](https://github.com/vvoelz/HPSandbox/blob/master/sequences/conf/hp19.tar.gz)
+We take HP 19mer protein as an example:
+1. Download and decompress [hp19.tar.gz](https://github.com/vvoelz/HPSandbox/blob/master/sequences/conf/hp19.tar.gz)
+n. 
+    ` keys = ['num_of_sample', 'chain_length', 'input_HPs', 'output_confs']
+    values = [len(washed_inputHPs), 19, washed_inputHPs, washed_outputconfs]
+    d = zip(keys,values)
+    data_dict = dict(d)
+    with open('HP19mer_conf_data.txt', 'wb') as f:
+        pickle.dump(data_dict, f)
+    `
+    

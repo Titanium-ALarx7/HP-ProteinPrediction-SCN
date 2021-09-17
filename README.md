@@ -62,4 +62,6 @@ python dataprocessor.py -dir hp19 -testsetSize 2000
 ```
 This command will read files from directory `hp19` and generate train/test file: 
 
+For this script contains procedures to check whether there are repeated sequences in the dataset. So the whole process may take several minutes.
+
 

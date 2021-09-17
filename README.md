@@ -11,9 +11,6 @@ In this section, we briefly introduce the mechanism of our own model AttentionNN
 In each python script, we realize the construction and training process of the neural network models. and also the evaluation of predicting accuracies, based on Tensorflow 1.15.
 We provide a data making script to produce and partition training sets and data sets of HP 19mer chains. The repository [vvoelz/HPSandbox](https://github.com/vvoelz/HPSandbox) provides the raw data of HP proteins.
 
-## LICENSE
-pass
-
 ## Repository Contents
 + Network Model Scripts:
   1. [`baseline_CNNmodel.py`](baseline_CNNmodel.py)：A model with a standard two-layer Convolutional Neural Network.

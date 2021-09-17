@@ -42,7 +42,7 @@ num_training_steps = epoches * epoc
 
 # data restoring directory
 directory0 = "data/"
-directory1 = "data_baseline_CNN/"
+directory1 = "data_baselineCNN/"
 accu_file_name = 'baselineCNN_epoch%d_basenum%d_name%s.txt' % (epoc, base_num,name_num)
 data_name = directory0 + directory1 + accu_file_name
 print("Accuracy data will be restored in %s" % data_name)

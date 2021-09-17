@@ -26,8 +26,9 @@ We provide a data making script to produce and partition training sets and data 
 + [`/data`](/data): The accuracy data file of each model script is defaultly restored in this directory.
 
 ## Model Usage
-+ The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. 
-+ You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. We take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  
+The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. 
+
+You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. We take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  
 ```sh
 $ python baseline_CNNmodel.py
 ```

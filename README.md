@@ -20,8 +20,13 @@ pass
   2. [`CRFmodel.py`](CRFmodel.py)：A model utilizing Conditional Random Field method for protein structure prediction, in our own way. For more details about CRF, see [Sheng Wang, et.al](https://www.nature.com/articles/srep18962). This model uses the same CNN module as `baseline_CNNmodel.py`.
   3. [`SCN_CNNmodel.py`](SCN_CNNmodel.py)：A model employs Strong Correlated Network and model structure is partly based on `baseline_CNNmodel.py`. It builds a strong correlation among protein residues in physical space through a self-consistent iteration loop.
   4. [`AttentionNN_HPSCC.py`](AttentionNN_HPSCC.py)：A model combining SCN mechanism and our own designed network block with self-attention layers. This model exhibits the optimum prediction performance. 
+  ps. For all the model scripts, use `python *.py --help` command to check all the optional parameters.
 
-+ [`ConfMapper.py`](ConfMapper.py):
++ [`ConfMapper.py`](ConfMapper.py): ConfMapper script realized one of the key algorithm, **Config Notation**, in this package. This algorithm generates a strong priori for the model to learn the local characters of protein folding structures efficiently. All the model scripts except `CRFmodel.py` in this package can call `ConfMapper.py` directly.(CRF is not compatible with Conf Notation) Config notation is set not enabled by default. And thus for each model script, the optional parameter `-bn, --base_num` is set as 1. To enable usage of Conf Notation, run the script with `python *Model*.py -bn n`. Here `n` should be a positive integer which sets the window size of Conf Notation to `n`.
+
++ `\dataset` & `dataprocessor.py`: 
+
++ `\data`
 ## Model Usage
 + The four neural network model python scripts contain: model itself, basic components of network models and accuracy metric. These modules have been encapsulated and can be imported from the scripts under working directory. You can also run these model scripts directly and get a complete model training process with period of 1200 epoches defaultly. \
   Here, we take `baseline_CNNmodel` as an example. We can use this command to run a model script in CMD or Shell:  `python baseline_CNNmodel.py -[optional parameters]`. This operation builds a corresponding neural network and optimize its variables on training set. And during running time, we can get following statistics of in time model performance.

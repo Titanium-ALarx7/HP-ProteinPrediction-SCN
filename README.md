@@ -74,12 +74,12 @@ python SCN_CNNmodel.py --help
 > -use_GPU USE_GPU 
 
 ### Usage for tensorflow 2.x
-For this repository is written under tensorflow 1.15. If you want to use it under tensrflow 2.0 framework, please replace the `import tensorflow as tf` command at the beginning  of each model script with:
+For this repository is written under tensorflow 1.15, please replace the `import tensorflow as tf` command at the beginning  of each model script with:
 ```
 import tensorflow.compat.v1 as tf
 tf.compat.v1.disable_eager_execution()
 ```
-
+if you want to use it under tensrflow 2.0 framework.
 ## Dataset Generation
 In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.py) to deal with original data in the [HPSandbox](https://github.com/vvoelz/HPSandbox) and generate train/test/validation sets. 
 

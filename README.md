@@ -79,7 +79,7 @@ For this repository is written under tensorflow 1.15, please replace the `import
 import tensorflow.compat.v1 as tf
 tf.compat.v1.disable_eager_execution()
 ```
-if you want to use it under tensrflow 2.0 framework.
+if you want to use it under tensorflow 2.0 framework.
 ## Dataset Generation
 In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.py) to deal with original data in the [HPSandbox](https://github.com/vvoelz/HPSandbox) and generate train/test/validation sets. 
 

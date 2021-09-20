@@ -4,12 +4,11 @@ HPprotein-prediction-SCN is a package provideing several python scripts of deep 
 In this repository, we provide examples of **A**ttention **S**trong **C**orrelated **N**etwork(**A-SCN**) model and **Configuration Mapping** method to solve the protein folding prediction problems. The molecular chains here are 19mer theoretical proteins of two-dimensional lattice HP model. For comparision, we also provide several standard NN models on the same task to show the improvement brought by A-SCN and CM. 
 
 ## Model Illustration
-(可能这一段应该放到最开始的地方)
-In this section, we briefly introduce the mechanism of our own model AttentionNN-HPSCC and our own version of Conditional Random Field.
-> More Details are Shown in Paper(links)
+In this section, we briefly introduce the mechanism of our own model AttentionNN-HPSCC and our own version of Conditional Random Field(CRF).
+> More Details are Shown in Paper(link to be added)
 
-In each python script, we realize the construction and training process of the neural network models. and also the evaluation of predicting accuracies, based on Tensorflow 1.15.
-We provide a data making script to produce and partition training sets and data sets of HP 19mer chains. The repository [vvoelz/HPSandbox](https://github.com/vvoelz/HPSandbox) provides the raw data of HP proteins.
+Each python script concludes the construction and training process of the neural network models, and also the evaluation of predicting accuracies, based on Tensorflow 1.15.
+We provide a data processing script to produce and partition training sets and test sets of HP 19mer chains. The repository [vvoelz/HPSandbox](https://github.com/vvoelz/HPSandbox) provides the raw data of HP proteins.
 
 ## Repository Contents
 + Network Model Scripts:
@@ -93,7 +92,7 @@ Then, simply use this command in bash or CMD:
 ```
 python dataprocessor.py -dir hp19 -testsetSize 2000
 ```
-This command will read files from directory `hp19` and generate train/test file: [HP19testset2000.txt](dataset/HP19testset2000.txt) & [HP19trainset11470.txt](dataset/HP19trainset11470.txt) in `\dataset` directory. `-dir` parameters denotes raw HP protein data is in which directory and .Other files in `\dataset` directory is mid product of this script. You can read the note in the script for more details.
+This command will read files from directory `hp19` and generate train/test file: [HP19testset2000.txt](dataset/HP19testset2000.txt) & [HP19trainset11470.txt](dataset/HP19trainset11470.txt) in `\dataset` directory. `-dir` parameters denotes raw HP protein data is in which directory and `-testset_size 2000` will partition a test set with 2000 samples.Other files in `\dataset` directory is mid product of this script. You can read the note in the script for more details.
 
 For this script contains procedures to check whether there are repeated sequences in the dataset. So the whole process may take several minutes. 
 

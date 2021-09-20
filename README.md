@@ -47,7 +47,33 @@ As shown above, for every 100 steps, the model prints accuracy and cross entropy
 We define this last value as accuracy，and record it every 100 steps. These data are written into a *txt* file in binary form using python package `pickle`, named as `baselineCNN_epoch*basenum*_name**.txt` and restored in `data\data_baselineCNN`. To monitor the change of the model performance during the optimization performance easily, *Test set latest accuracies* shows accuracy of the model in last 5000 steps. 
 
 This illustration holds the same for all the model scripts.
-    
+
+### Commandline Parameters
+To customize the hyperparameters of model structures, training process and usage of ConfMapper etc., we can take optional input arguments while running model scripts.
+```
+python SCN_CNNmodel.py -nn 1 -use_GPU 0,1 -bn 5
+```
+To see all the optional arguments and their default values, please use the following command:
+```
+python SCN_CNNmodel.py --help
+```
+> usage: SCN_CNNmodel.py [-h] [-b BATCH_SIZE] [-nn NAME_NUM] [-bn BASE_NUM] \
+>                        [-in ITER_NUM] [-en EPOCH_NUM] [-use_GPU USE_GPU]
+>
+> default configuration: batch_size = 60 c_length = 19 num_train = 11470 \
+> embedding_size = 128 epoches = int(num_train / batch_size) \
+> num_training_steps = epoches * 500
+>
+> optional arguments: \
+> -h, --help            show this help message and exit \
+> -b BATCH_SIZE, --batch_size BATCH_SIZE \
+> -nn NAME_NUM, --name_num NAME_NUM \
+> -bn BASE_NUM, --base_num BASE_NUM \
+> -in ITER_NUM, --iter_num ITER_NUM \
+> -en EPOCH_NUM, --epoch_num EPOCH_NUM \
+> -use_GPU USE_GPU 
+
+
 ## Dataset Generation
 In this section, we'll introduce how to use [`dataprocessor.py`](dataprocessor.py) to deal with original data in the [HPSandbox](https://github.com/vvoelz/HPSandbox) and generate train/test/validation sets. 
 

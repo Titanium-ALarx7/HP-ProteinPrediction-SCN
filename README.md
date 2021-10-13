@@ -4,7 +4,7 @@ HPprotein-prediction-SCN is a package provideing several python scripts of deep 
 In this repository, we provide examples of **A**ttention **S**trong **C**orrelated **N**etwork(**A-SCN**) model and **Configuration Mapping** method to solve the protein folding prediction problems. The molecular chains here are 19mer theoretical proteins of two-dimensional lattice HP model. For comparision, we also provide several standard NN models on the same task to show the improvement brought by A-SCN and CM. 
 
 ## Model Illustration
-In this section, we briefly introduce the mechanism of our own model AttentionNN-HPSCC and our own version of Conditional Random Field(CRF).
+In this section, we briefly introduce the mechanism of our own model stored in `AttentionNN-HPSCC.py` and our own version of Conditional Random Field(CRF).
 > More Details are Shown in Paper(link to be added)
 
 Each python script concludes the construction and training process of the neural network models, and also the evaluation of predicting accuracies, based on Tensorflow 1.15.
